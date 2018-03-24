@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="//apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="demo.css">
+  
+<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+
+</head>
+<body ng-controller="EmployCtrl" >
+
+<script src="Employee.js"></script>
+<div class="container">
+
+<h3>Employee</h3>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>name<button type="button" ng-click="request('name')" >order</button></th>     
+      <th>salary<button type="button" ng-click="request('salary')">order</button></th>
+      <th>hiredate<button type="button" ng-click="request('hiredate')">order</button></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="em in employee">
+      <td><button type="button" ng-click="query(em.name)">{{ em.name }}</button></td>
+      <td>{{ em.salary }}</td>
+      <td>{{ em.hireDate }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<div id="demo">
+  <form id="search">
+    Search: <input type="text" ng-model="firstname">
+	<button ng-click="query(firstname)">search</button>
+  </form>
+
+  <table class="table table-striped" ng-show="myVar">
+  <thead>
+    <tr>
+      <th>name</th>     
+      <th>salary</th>
+      <th>hiredate</th>
+      <th >phone</th>
+      <th >email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    	<td>{{ single.name }}</td>
+      	<td>{{ single.salary }}</td>
+      	<td>{{ single.hireDate }}</td>
+      	<td>{{ single.phone }}</td>
+      	<td>{{ single.email }}</td>
+      	
+    </tr>
+  </tbody>
+</table>
+</div>
+
+</div>
+
+</body>
+</html>
