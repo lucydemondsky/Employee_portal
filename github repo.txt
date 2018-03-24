@@ -1,0 +1,5 @@
+https://github.com/lucydemondsky/Employee_portal.git
+
+1, Database connection confuguration in the /resources/application.properties
+2, I made some database data in the xldemo.csv, you could import to your database.
+3, Run main application in the /demo/Application.java
